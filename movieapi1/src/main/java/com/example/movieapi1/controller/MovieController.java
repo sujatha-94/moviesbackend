@@ -21,14 +21,6 @@ public class MovieController {
     public String sayHello() {
         return "Welcome to the Movie API!";
     }
-
-
-    // Create a new movie
-    @PostMapping("/movies") // Add /movies path to distinguish this endpoint
-    public ResponseEntity<Movie> createMovie(@RequestBody Movie movie) {
-        return ResponseEntity.ok(movieService.createMovie(movie));
-    }
-
    
 
     @GetMapping("/genre/{genre}")
